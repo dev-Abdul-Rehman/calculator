@@ -1,0 +1,103 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+  background-color: #333333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.calculator{
+  background-color: #222222;
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-shadow: 0px 3px 6px black;
+}
+input{
+  padding: 20px 10px;
+  text-align: right;
+  font-size: 18px;
+  color: white;
+  border: none;
+  width: 100%;
+  background-color: #111111;
+  border-radius: 2px;
+}
+input::placeholder{
+  font-size: 18px;
+  color: grey;
+}
+.buttons{
+  display: grid;
+  grid-template-columns: repeat(4 ,1fr);
+  row-gap: 6px;
+  column-gap: 6px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.buttons .equal-btn{
+  grid-row: span 2;
+  background-color: orangered;
+  color: white;
+  box-shadow: 0px 4px 1px rgba(255, 68, 0, 0.3);
+}
+.buttons .equal-btn:hover{
+  background-color: rgb(212, 70, 19);
+}
+.buttons .equal-btn:active{
+  background-color: rgb(188, 63, 17);
+}
+
+.buttons .add-btn,
+.buttons .subtract-btn,
+.buttons .delete-btn,
+.buttons .multiply-btn,
+.buttons .divide-btn{
+  background-color: orangered;
+  color: white;
+  box-shadow: 0px 4px 1px rgba(255, 68, 0, 0.3);
+}
+.buttons .add-btn:hover,
+.buttons .subtract-btn:hover,
+.buttons .delete-btn:hover,
+.buttons .multiply-btn:hover,
+.buttons .divide-btn:hover{
+  background-color: rgb(212, 70, 19);
+}
+.buttons .add-btn:active,
+.buttons .subtract-btn:active,
+.buttons .delete-btn:active,
+.buttons .multiply-btn:active,
+.buttons .divide-btn:active{
+  background-color: rgb(188, 63, 17);
+
+}
+.buttons .clear-btn,
+.buttons .mc-btn,
+.buttons .m-plus-btn,
+.buttons .m-minus-btn,
+.buttons .mr-btn{
+  background-color: rgb(241, 223, 223);
+}
+.buttons .clear-btn:hover,
+.buttons .mc-btn:hover,
+.buttons .m-plus-btn:hover,
+.buttons .m-minus-btn:hover,
+.buttons .mr-btn:hover{
+  background-color: white;
+}
+
+.buttons button{
+  padding: 10px 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 4px 1px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  font-weight: 600;
+}

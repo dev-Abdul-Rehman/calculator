@@ -1,0 +1,115 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+  background-color: #444444;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.calculator{
+  background-color: #111111;
+  border-radius: 6px;
+}
+.input-text{
+  border-radius: 6px;
+  position: relative;
+  background-color: #222222;
+  padding: 5px 10px;
+}
+.input-text input{
+  width: 100%;
+  padding: 10px 20px;
+  text-align: right;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  margin-bottom: 20px;
+}
+.input-text input::placeholder{
+  font-size: 20px;
+  color: white;
+  font-weight: 900;
+}
+.input-text .down-arrow-symbol{
+  position: absolute;
+  bottom: 0;
+  left: 48%;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 2px;
+}
+.buttons{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+  padding: 5px 10px;
+}
+.buttons button{
+  padding: 8px 16px;
+  border-radius: 7px;
+  border: none;
+  background-color: #222222;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0px 4px 2px rgba(255, 255, 255, .4);
+  transition: background-color 0.15;
+}
+.buttons button:hover{
+  background-color: #333333;
+}
+.buttons button:active{
+  background-color: #444444;
+}
+.buttons .equal-btn{
+  grid-row: span 2;
+  background: linear-gradient(180deg , rgb(38, 229, 235),rgb(13, 78, 72));
+  text-align: center;
+}
+.buttons .all-clear-btn,
+.buttons .addition-btn,
+.buttons .multiply-btn,
+.buttons .percentage-btn,
+.buttons .divide-btn,
+.buttons .square-btn{
+  background: linear-gradient(180deg, rgba(71, 106, 181, 0.737),rgba(74, 87, 174, 0.726));
+}
+
+@media (max-width:600px){
+  .calculator{
+    width: 200px;
+    max-width: 90%;
+  }
+  .buttons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 5px;
+    column-gap: 5px;
+    padding: 4px 8px;
+  }
+  .buttons button{
+    padding: 4px 8px;
+    border-radius: 7px;
+    border: none;
+    background-color: #222222;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0px 3px 2px rgba(255, 255, 255, .4);
+
+  }
+  .buttons .equal-btn{
+    grid-row: span 2;
+    background: linear-gradient(180deg , rgb(38, 229, 235),rgb(13, 78, 72));
+    text-align: center;
+  }
+}
